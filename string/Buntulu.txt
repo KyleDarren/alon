@@ -1,0 +1,25 @@
+/*
+* Temporarily Closed [05-5-22]
+* Matgal pa ito, sa susunod ko na lang gagawin 
+pag sinipagan na ako.
+*/
+package com.funser.alon.string;
+
+public class Buntulu {
+  String str;
+  
+  public Buntulu(String string) {
+    str = string;
+  }
+  
+  private static String unicode(char string) {
+    return "\\u" + Integer.toHexString(string | 0x10000).substring(1) ;
+  }
+  
+  
+  
+  public static void main(String[] args) {
+    System.out.println(unicode('&'));
+  }
+  
+}

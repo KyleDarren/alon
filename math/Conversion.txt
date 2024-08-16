@@ -1,0 +1,34 @@
+/*
+* Temporarily Closed [05-5-22]
+* Matagal pa ito
+* Huwag nong idedelete yung Con.html kailngan yan dito
+*/
+
+package com.funser.alon.math;
+
+public class Conversion {
+  float val, factor = 1, output;
+  String from, to;
+  private final int M_TO_CM = 1000;
+  
+  public Conversion(float value, String fromUnit, String toUnit) {
+    val = value;
+    from = fromUnit;
+    to = toUnit;
+    if (from.equals("m") && to.equals("cm")) {
+      factor = M_TO_CM;
+    } else if (from.equals("cm") && to.equals("m")) {
+      factor /= M_TO_CM;
+    }
+  }
+  
+  public float convert() {
+    return val * factor;
+  }
+  
+  public static void main(String[] args) {
+    Conversion con = new Conversion (10, "m", "cm");
+    System.out.println(con.convert());
+  }
+  
+}
